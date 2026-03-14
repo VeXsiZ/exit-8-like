@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d3ubj2jq42t0a"]
+
+[ext_resource type="Script" uid="uid://cp61qhssf3l72" path="res://node_manger/node_manger.gd" id="1_cqfg2"]
+[ext_resource type="PackedScene" uid="uid://civdbderasy42" path="res://entress/entress.tscn" id="2_bjxr3"]
+[ext_resource type="PackedScene" uid="uid://d3g2on2y544ar" path="res://middle/middle.tscn" id="3_nob7e"]
+
+[node name="NodeManger" type="Node3D" unique_id=1337128752]
+script = ExtResource("1_cqfg2")
+entress = ExtResource("2_bjxr3")
+middle = ExtResource("3_nob7e")
