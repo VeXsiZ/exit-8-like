@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 #movements vars ----------------------------------------------------------------
 const walking_speed = 10.0
-const running_speed = 25.0
+const running_speed = 100.0
 var SPEED = 0
 var direction
 const JUMP_VELOCITY = 4.5

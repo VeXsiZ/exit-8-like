@@ -31,3 +31,8 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18.438213, 0)
 
 [node name="NodeManger" parent="." unique_id=1337128752 instance=ExtResource("2_tcf2h")]
+
+[node name="anamoly_status" type="Label" parent="." unique_id=1781132368]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "aaaaaaa"
