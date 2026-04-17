@@ -2,7 +2,7 @@ extends STATE
 
 var gravity_force = -9.8
 const walking_speed = 5.0
-const running_speed = 12.0
+const running_speed = 32.0
 var SPEED = 0
 var direction
 const JUMP_VELOCITY = 4.5
