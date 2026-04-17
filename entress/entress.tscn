@@ -59,10 +59,22 @@ points = PackedVector3Array(-0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5
 size = Vector3(3.6671143, 9.081909, 16.745613)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_db7lh"]
-size = Vector3(11.157227, 3.4190674, 5.8272705)
+size = Vector3(11.157227, 3.4190674, 1.7148743)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_auw45"]
-size = Vector3(14.175232, 3.8729858, 5.70166)
+size = Vector3(14.175232, 3.8729858, 2.7282715)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ayekj"]
+size = Vector3(11.51001, 4.381897, 1.3977051)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ms3pi"]
+size = Vector3(15.782715, 5.383667, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8ao3h"]
+size = Vector3(10.850586, 4.563965, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2lh1l"]
+size = Vector3(15.745178, 5.9422607, 1)
 
 [node name="entress" type="Node3D" unique_id=1534936694]
 script = ExtResource("1_db7lh")
@@ -163,22 +175,72 @@ shape = SubResource("BoxShape3D_nx37s")
 debug_color = Color(0.9719083, 0, 0.44799322, 0.41960785)
 
 [node name="forward_load" type="Area3D" parent="." unique_id=185942298]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.320618, 0.8802037, 21.349182)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.320618, 0.8802037, 43.383682)
 collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="forward_load" unique_id=1608640550]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7553711, 1.2095337, 0.2197876)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7553711, 1.2095337, 2.3915634)
 shape = SubResource("BoxShape3D_db7lh")
+debug_color = Color(1, 0.011764706, 0, 0.41960785)
 
 [node name="backward_load" type="Area3D" parent="." unique_id=432045036]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.030907, 1.2836058, -17.646797)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.030907, 1.2836058, -40.361046)
 collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="backward_load" unique_id=1197892363]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5177307, 1.4364929, -2.35083)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5177307, 1.4364929, -3.8375244)
 shape = SubResource("BoxShape3D_auw45")
 debug_color = Color(0.98004335, 0, 0.3869308, 0.41960785)
+
+[node name="score trigers" type="Node3D" parent="." unique_id=1271992212]
+
+[node name="trigers_activator" type="Node3D" parent="score trigers" unique_id=1991321213]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.371075, 0, 36.65423)
+
+[node name="forward_triger_activator" type="Area3D" parent="score trigers/trigers_activator" unique_id=1535942885]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.9014168)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="score trigers/trigers_activator/forward_triger_activator" unique_id=1094994894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4371338, 1.6909485, 2.4616432)
+shape = SubResource("BoxShape3D_ayekj")
+
+[node name="backward_triger_activator" type="Area3D" parent="score trigers/trigers_activator" unique_id=762564583]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -99.888504, 0, -73.7559)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="score trigers/trigers_activator/backward_triger_activator" unique_id=1214214807]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30297852, 2.1918335, -1.4276466)
+shape = SubResource("BoxShape3D_ms3pi")
+
+[node name="real_trigers" type="Node3D" parent="score trigers" unique_id=625577319]
+
+[node name="forward_real_triger" type="Area3D" parent="score trigers/real_trigers" unique_id=2004412538]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.996185, 1.7258282, 42.104843)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="score trigers/real_trigers/forward_real_triger" unique_id=994087587]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.1445427)
+shape = SubResource("BoxShape3D_8ao3h")
+debug_color = Color(3.4172833e-06, 0.6353489, 0.42062902, 0.41960785)
+
+[node name="backward_real_triger" type="Area3D" parent="score trigers/real_trigers" unique_id=1949368745]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.45261, 0, -41.101017)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="score trigers/real_trigers/backward_real_triger" unique_id=1633308480]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9859314, 2.4711304, 0)
+shape = SubResource("BoxShape3D_2lh1l")
+debug_color = Color(0.21307582, 0.6388285, 0.1067941, 0.41960785)
 
 [connection signal="body_entered" from="current_scene_selecter" to="." method="_on_current_scene_selecter_body_entered"]
 [connection signal="body_entered" from="forward_load" to="." method="_on_forward_load_body_entered"]
 [connection signal="body_entered" from="backward_load" to="." method="_on_backward_load_body_entered"]
+[connection signal="body_entered" from="score trigers/trigers_activator/forward_triger_activator" to="." method="_on_forward_triger_activator_body_entered"]
+[connection signal="body_entered" from="score trigers/trigers_activator/backward_triger_activator" to="." method="_on_backward_triger_activator_body_entered"]
+[connection signal="body_entered" from="score trigers/real_trigers/forward_real_triger" to="." method="_on_forward_real_triger_body_entered"]
+[connection signal="body_entered" from="score trigers/real_trigers/backward_real_triger" to="." method="_on_backward_real_triger_body_entered"]

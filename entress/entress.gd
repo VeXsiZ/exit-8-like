@@ -1,6 +1,8 @@
 extends Node3D
 var segment_name_tag = "entress"
 var anamoly_scene_status
+signal player_entered_from_signal
+signal player_go_to_signal
 
 signal player_entered_scene
 var current_scene_states = false
@@ -90,3 +92,53 @@ func _on_backward_load_body_entered(body: Node3D) -> void:
 			lock_backward()
 			player_load_new_segment.emit("mid",backward.global_position,"backward",self)
 #################################################################################
+
+var forward_score_activated = false
+var backward_score_activated = false
+
+var forward_score_trigired = false
+var backward_score_trigired = false
+
+func _on_forward_triger_activator_body_entered(body: Node3D) -> void:
+	if !forward_score_activated:
+		forward_score_activated = true
+		player_entered_from()
+		print("forward triger activated")
+
+
+func _on_forward_real_triger_body_entered(body: Node3D) -> void:
+	#if forward_score_trigired:
+		#pass
+	if forward_score_activated and !forward_score_trigired:
+		forward_score_trigired = true
+		player_go_to()
+		print("forward triger worked")
+
+
+func _on_backward_triger_activator_body_entered(body: Node3D) -> void:
+	if !backward_score_activated:
+		backward_score_activated = true
+		player_entered_from()
+		print("backward triger activated")
+
+func _on_backward_real_triger_body_entered(body: Node3D) -> void:
+	#if backward_score_activated:
+		#pass
+	if backward_score_activated and !backward_score_trigired:
+		backward_score_trigired = true
+		player_go_to()
+		print("backward triger worked")
+
+
+
+func player_entered_from():
+	if forward_score_activated and !backward_score_activated:
+		player_entered_from_signal.emit("forward")
+	elif !forward_score_activated and backward_score_activated:
+		player_entered_from_signal.emit("backward")
+
+func player_go_to():
+	if forward_score_trigired and !backward_score_trigired:
+		player_go_to_signal.emit("forward")
+	elif !forward_score_trigired and backward_score_trigired:
+		player_go_to_signal.emit("backward")

@@ -7,9 +7,11 @@ var dic_of_segments : Dictionary
 @export var middle : PackedScene
 var active_segments : Array
 var segments_pos : Array
-var last_direction_spawned = null
 var score : int = 0
 var current_scene
+@onready var score_counter_label = get_parent().get_node("score_counter")
+@onready var anamoly_status_label = get_parent().get_node("anamoly_status")
+
 
 
 func _ready() -> void:
@@ -36,16 +38,15 @@ func hallway_handler(segment = null,pos = null,dir = null,caller = null):
 		var temp = dic_of_segments[segment].instantiate()
 		temp.player_load_new_segment.connect(on_player_load_new_segment)
 		temp.player_entered_scene.connect(on_current_scene_handler)
-		temp.player_direction.connect(score_handler)
 		get_parent().add_child(temp)
 		active_segments.append(temp)
 		temp.global_position = pos
 		sides_locker(caller,temp,dir)
-		score_handler(dir,temp,caller)
-		last_direction_spawned = dir
 		segments_cleaner(caller,temp,dir)
 		if temp.get_segment_name_tag() == "entress":
-			var anamoly_status_label = get_parent().get_node("anamoly_status")
+			active_entress_instance = temp
+			temp.player_entered_from_signal.connect(get_where_player_entered_from)
+			temp.player_go_to_signal.connect(score_handler)
 			if temp.get_anamoly_scene_status():
 				anamoly_status_label.text = "anamoly_status : TRUE"
 			else:
@@ -96,5 +97,40 @@ func on_player_load_new_segment(segment,pos,dir,caller):
 
 
 
-func score_handler(dir,temp,caller):
-	print(score)
+
+###########################################################################
+var where_player_entered_from
+var where_player_go_to
+var active_entress_instance
+
+func get_where_player_entered_from(player_entered):
+	where_player_entered_from = player_entered
+
+func score_handler(player_go_to):
+	where_player_go_to = player_go_to
+
+	if active_entress_instance.get_anamoly_scene_status():
+		if where_player_entered_from == "forward":
+			if where_player_go_to == "backward":
+				score += 1
+			elif where_player_go_to == "forward":
+				score = 0
+		elif where_player_entered_from == "backward":
+			if where_player_go_to == "forward":
+				score += 1
+			elif where_player_go_to == "backward":
+				score = 0
+	elif !active_entress_instance.get_anamoly_scene_status():
+		if where_player_entered_from == "forward":
+			if where_player_go_to == "forward":
+				pass
+			elif where_player_go_to == "backward":
+				score = 0
+		elif where_player_entered_from == "backward":
+			if where_player_go_to == "forward":
+				score = 0
+			elif where_player_go_to == "backward":
+				pass
+	score_counter_label.text = str(score)
+	
+	
