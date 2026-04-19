@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://yql4ftkplnhc"]
+
+[ext_resource type="PackedScene" uid="uid://buwdxet8pi8pa" path="res://assets/living room/tv_on_table/imported_models/meshy_model_1776547452.1.glb" id="1_fl8cr"]
+[ext_resource type="PackedScene" uid="uid://cvdsvvfhvh3to" path="res://assets/living room/small_couch/imported_models/meshy_model_1776578710.766.glb" id="2_w5bun"]
+[ext_resource type="PackedScene" uid="uid://dc7i32ll25up4" path="res://assets/living room/couch/imported_models/meshy_model_1776547628.026.glb" id="3_xoaad"]
+[ext_resource type="PackedScene" uid="uid://bd6p5a346o4r5" path="res://assets/living room/table/imported_models/meshy_model_1776547541.294.glb" id="4_6350i"]
+[ext_resource type="PackedScene" uid="uid://cdxv6gwdrv8v0" path="res://assets/living room/empyt_bookshelf/imported_models/meshy_model_1776582961.629.glb" id="5_sjdjd"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_akwgf"]
+
+[node name="Test" type="Node3D" unique_id=1936172295]
+metadata/__editor_changed = true
+
+[node name="walls" type="Node3D" parent="." unique_id=1375170523]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="walls" unique_id=346567420]
+transform = Transform3D(24.044859, 0, 0, 0, 1, 0, 0, 0, 25.405136, 0, 0, 0)
+mesh = SubResource("BoxMesh_akwgf")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="walls" unique_id=46935324]
+transform = Transform3D(24.044859, 0, 0, 0, -4.371139e-08, -25.405138, 0, 1, -1.1104938e-06, 0, 12.293224, 13.255495)
+mesh = SubResource("BoxMesh_akwgf")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="walls" unique_id=595162427]
+transform = Transform3D(24.044859, 0, 0, 0, -4.371139e-08, -25.405138, 0, 1, -1.1104938e-06, 0, 12.293224, -12.391846)
+mesh = SubResource("BoxMesh_akwgf")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="walls" unique_id=728643942]
+transform = Transform3D(-1.1167217e-06, -1, 0, -1.1167217e-06, 1.9106855e-15, -25.405138, 25.547617, -4.371139e-08, -1.1104938e-06, 12.069353, 12.293224, 0.39244413)
+mesh = SubResource("BoxMesh_akwgf")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="walls" unique_id=754801428]
+transform = Transform3D(-1.1167217e-06, -1, 0, -1.1167217e-06, 1.9106855e-15, -25.405138, 25.547617, -4.371139e-08, -1.1104938e-06, -11.317308, 12.293224, 0.39244413)
+mesh = SubResource("BoxMesh_akwgf")
+
+[node name="stuff" type="Node3D" parent="." unique_id=587466976]
+
+[node name="meshy_model_1776547452_1" parent="stuff" unique_id=903215050 instance=ExtResource("1_fl8cr")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.78014183, 2.2890282, -11.227673)
+
+[node name="meshy_model_1776578710_766" parent="stuff" unique_id=1195343559 instance=ExtResource("2_w5bun")]
+transform = Transform3D(-0.9999623, 0, -0.008691616, 0, 1, 0, 0.008691616, 0, -0.9999623, 0, 1.4033697, 5.090824)
+
+[node name="meshy_model_1776547628_027" parent="stuff" unique_id=643749322 instance=ExtResource("3_xoaad")]
+transform = Transform3D(-0.012007967, 0, 1.999964, 0, 2, 0, -1.999964, 0, -0.012007967, -5.269553, 1.35585, -1.208694)
+
+[node name="meshy_model_1776547628_026" parent="stuff" unique_id=1798201160 instance=ExtResource("3_xoaad")]
+transform = Transform3D(0.072241, 0, -1.9986949, 0, 2, 0, 1.9986949, 0, 0.072241, 6.1352, 1.3470316, -1.208694)
+
+[node name="meshy_model_1776547541_294" parent="stuff" unique_id=1635658115 instance=ExtResource("4_6350i")]
+transform = Transform3D(-0.012426622, 0, -1.9999614, 0, 2, 0, 1.9999614, 0, -0.012426622, 0, 1.1166492, -0.90252763)
+
+[node name="meshy_model_1776582961_629" parent="stuff" unique_id=160110578 instance=ExtResource("5_sjdjd")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.88211, 2.463594, 12.054605)
+
+[node name="meshy_model_1776582961_630" parent="stuff" unique_id=1174018995 instance=ExtResource("5_sjdjd")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.158246, 2.463594, 12.054605)

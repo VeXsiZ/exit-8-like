@@ -19,6 +19,7 @@ glow_enabled = true
 
 [node name="world" type="Node3D" unique_id=225304034]
 script = ExtResource("1_4717r")
+metadata/__editor_changed = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1059083556]
 environment = SubResource("Environment_4717r")
