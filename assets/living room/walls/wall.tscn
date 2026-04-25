@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c0q6a1ybhrwaw"]
+
+[ext_resource type="Material" uid="uid://cfsxbbr7wuo5h" path="res://assets/living room/walls/new_standard_material_3d.tres" id="1_twb5e"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_6oygf"]
+
+[node name="Wall" type="CSGMesh3D" unique_id=363076794]
+transform = Transform3D(19.144773, 0, 0, 0, 11.482153, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("1_twb5e")
+mesh = SubResource("BoxMesh_6oygf")
+metadata/__editor_changed = true

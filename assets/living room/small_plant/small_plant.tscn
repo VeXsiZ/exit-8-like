@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://e6l2kdued0rf"]
+
+[ext_resource type="PackedScene" uid="uid://dw6ecb5a0rr3n" path="res://assets/living room/small_plant/44313547/Models/Max/44313547.fbx" id="1_ufap5"]
+[ext_resource type="Texture2D" uid="uid://bxikof4f5jiu" path="res://assets/living room/small_plant/44313547/Texture/VRay/IndoorftArecaPalmArtificialTreePot_BaseColor.png" id="2_jasoj"]
+[ext_resource type="Texture2D" uid="uid://cawqcd64sh3xs" path="res://assets/living room/small_plant/44313547/Texture/VRay/IndoorftArecaPalmArtificialTreePot_Height.png" id="3_4dft5"]
+[ext_resource type="Texture2D" uid="uid://cox5w61pkgtba" path="res://assets/living room/small_plant/44313547/Texture/VRay/IndoorftArecaPalmArtificialTreePot_Normal.png" id="4_17m3i"]
+[ext_resource type="Texture2D" uid="uid://d33l1oqn1gg0v" path="res://assets/living room/small_plant/44313547/Texture/VRay/IndoorftArecaPalmArtificialTreePot_Roughness.png" id="5_qsnbc"]
+[ext_resource type="Texture2D" uid="uid://bh86jb4v3at7e" path="res://assets/living room/small_plant/44313547/Texture/VRay/IndoorftArecaPalmArtificialTreeRocks_BaseColor.png" id="6_lt5ee"]
+[ext_resource type="Texture2D" uid="uid://d0xtebaxmq0co" path="res://assets/living room/small_plant/44313547/Texture/VRay/IndoorftArecaPalmArtificialTreeRocks_Height.png" id="7_45def"]
+[ext_resource type="Texture2D" uid="uid://fufcxx2nb46u" path="res://assets/living room/small_plant/44313547/Texture/VRay/IndoorftArecaPalmArtificialTreeRocks_Normal.png" id="8_q1sea"]
+[ext_resource type="Texture2D" uid="uid://qeyob2mytipx" path="res://assets/living room/small_plant/44313547/Texture/VRay/IndoorftArecaPalmArtificialTreeRocks_Roughness.png" id="9_2drln"]
+[ext_resource type="Texture2D" uid="uid://bl2k85aborpdm" path="res://assets/living room/small_plant/44313547/Texture/VRay/IndoorftArecaPalmArtificialTree_BaseColor.png" id="10_8jquo"]
+[ext_resource type="Texture2D" uid="uid://bt1mkugeni8js" path="res://assets/living room/small_plant/44313547/Texture/VRay/IndoorftArecaPalmArtificialTree_Height.png" id="11_omwq8"]
+[ext_resource type="Texture2D" uid="uid://cplt8vk0cp6c" path="res://assets/living room/small_plant/44313547/Texture/VRay/IndoorftArecaPalmArtificialTree_Normal.png" id="12_l63no"]
+[ext_resource type="Texture2D" uid="uid://dmlkf0ts7lf8v" path="res://assets/living room/small_plant/44313547/Texture/VRay/IndoorftArecaPalmArtificialTree_Roughness.png" id="13_tmlpy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xsi38"]
+albedo_texture = ExtResource("2_jasoj")
+roughness_texture = ExtResource("5_qsnbc")
+normal_enabled = true
+normal_texture = ExtResource("4_17m3i")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_4dft5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gs0t8"]
+albedo_texture = ExtResource("6_lt5ee")
+roughness_texture = ExtResource("9_2drln")
+normal_enabled = true
+normal_texture = ExtResource("8_q1sea")
+heightmap_enabled = true
+heightmap_texture = ExtResource("7_45def")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8h21t"]
+albedo_texture = ExtResource("10_8jquo")
+roughness_texture = ExtResource("13_tmlpy")
+normal_enabled = true
+normal_texture = ExtResource("12_l63no")
+heightmap_enabled = true
+heightmap_texture = ExtResource("11_omwq8")
+
+[node name="44313547" unique_id=1257998692 instance=ExtResource("1_ufap5")]
+
+[node name="IndoorftArecaPalmArtificialTreePot" parent="Dummy001" parent_id_path=PackedInt32Array(1499051926) index="0" unique_id=1402342406]
+material_override = SubResource("StandardMaterial3D_xsi38")
+
+[node name="IndoorftArecaPalmArtificialTreeRocks" parent="Dummy001" parent_id_path=PackedInt32Array(1499051926) index="1" unique_id=1876567309]
+material_override = SubResource("StandardMaterial3D_gs0t8")
+
+[node name="IndoorftArecaPalmArtificialTree" parent="Dummy001" parent_id_path=PackedInt32Array(1499051926) index="2" unique_id=1582603888]
+material_override = SubResource("StandardMaterial3D_8h21t")

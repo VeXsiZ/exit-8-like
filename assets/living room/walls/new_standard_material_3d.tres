@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cfsxbbr7wuo5h"]
+
+[ext_resource type="Texture2D" uid="uid://umsk0cca53to" path="res://assets/living room/walls/diffuse.jpg" id="1_tx813"]
+[ext_resource type="Texture2D" uid="uid://dt5sug17nxgcc" path="res://assets/living room/walls/normal.jpg" id="2_6mlra"]
+[ext_resource type="Texture2D" uid="uid://bt1hgwicob1gj" path="res://assets/living room/walls/roughness.jpg" id="3_v7xt2"]
+
+[resource]
+albedo_texture = ExtResource("1_tx813")
+roughness_texture = ExtResource("3_v7xt2")
+normal_enabled = true
+normal_texture = ExtResource("2_6mlra")
+uv1_scale = Vector3(3, 3, 3)
+uv1_offset = Vector3(0.765, 0, 0)

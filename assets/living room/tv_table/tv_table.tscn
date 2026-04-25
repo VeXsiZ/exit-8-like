@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dugeepwwgcx67"]
+
+[ext_resource type="PackedScene" uid="uid://dfr6ghfvwbqlr" path="res://assets/living room/tv_table/meshy_model_1777129183.218.glb" id="1_7q3lv"]
+[ext_resource type="Texture2D" uid="uid://c26ekjmsf6q7m" path="res://assets/living room/tv_table/meshy_model_1777129183_0.jpg" id="2_igvw4"]
+[ext_resource type="Texture2D" uid="uid://bqip1852180bp" path="res://assets/living room/tv_table/meshy_model_1777129183_1.jpg" id="3_g6xfa"]
+[ext_resource type="Texture2D" uid="uid://ds1vm3jydc2cp" path="res://assets/living room/tv_table/meshy_model_1777129183_2.jpg" id="4_p2anm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gcbug"]
+albedo_texture = ExtResource("2_igvw4")
+metallic = 1.0
+metallic_texture = ExtResource("3_g6xfa")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("3_g6xfa")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_scale = 1.7
+normal_texture = ExtResource("4_p2anm")
+ao_enabled = true
+ao_texture = ExtResource("3_g6xfa")
+
+[node name="meshy_model_1777129183_218" unique_id=663136167 instance=ExtResource("1_7q3lv")]
+
+[node name="Mesh" parent="." index="0" unique_id=1037767115]
+material_override = SubResource("StandardMaterial3D_gcbug")
