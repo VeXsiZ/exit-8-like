@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://catpwejd0s275"]
+
+[ext_resource type="PackedScene" uid="uid://bwmlrd1dmc4bd" path="res://test 2/assets/tv_stand/tv_stand_origin.fbx" id="1_ois1n"]
+[ext_resource type="Texture2D" uid="uid://jih670sv135g" path="res://test 2/assets/tv_stand/Wood 02 Height.png" id="3_p2y8f"]
+[ext_resource type="Texture2D" uid="uid://duny2l131nstd" path="res://test 2/assets/tv_stand/Wood 02 Normal.png" id="4_mst4a"]
+[ext_resource type="Texture2D" uid="uid://cy3hvqgdn0kcu" path="res://test 2/assets/tv_stand/Wood 02 Roughness.png" id="5_rc5do"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_juw55"]
+load_path = "res://.godot/imported/tv_stand_re_uv_Wood 02 Color 02.png-a62aa741ee511e2f408e53724d6f1822.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lew2y"]
+albedo_texture = SubResource("CompressedTexture2D_juw55")
+roughness_texture = ExtResource("5_rc5do")
+normal_enabled = true
+normal_texture = ExtResource("4_mst4a")
+heightmap_enabled = true
+heightmap_scale = -0.626
+heightmap_texture = ExtResource("3_p2y8f")
+
+[node name="tv_stand_origin" unique_id=936520847 instance=ExtResource("1_ois1n")]
+
+[node name="AlphaB2B STANDARTTVSONOMA" parent="." index="0" unique_id=655458014]
+material_override = SubResource("StandardMaterial3D_lew2y")

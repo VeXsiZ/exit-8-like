@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b3wxctqdl6pba"]
+
+[ext_resource type="PackedScene" uid="uid://b5lsapmru3hpc" path="res://test 2/assets/table/table.fbx" id="1_t0nt2"]
+[ext_resource type="Texture2D" uid="uid://dtdf3shv08voj" path="res://test 2/assets/table/WoodTable_wooden_table_02_BaseColor.png" id="2_b3lvk"]
+[ext_resource type="Texture2D" uid="uid://uarp08qltmwg" path="res://test 2/assets/table/WoodTable_wooden_table_02_Height.png" id="3_ya837"]
+[ext_resource type="Texture2D" uid="uid://djisjd6oh1238" path="res://test 2/assets/table/WoodTable_wooden_table_02_Metallic.png" id="4_iqiy6"]
+[ext_resource type="Texture2D" uid="uid://b5vrd7nmws8bs" path="res://test 2/assets/table/WoodTable_wooden_table_02_Normal.png" id="5_w14br"]
+[ext_resource type="Texture2D" uid="uid://cpiwhrr52kjwj" path="res://test 2/assets/table/WoodTable_wooden_table_02_Roughness.png" id="6_bjkyd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g05a4"]
+albedo_texture = ExtResource("2_b3lvk")
+metallic = 1.0
+metallic_texture = ExtResource("4_iqiy6")
+roughness_texture = ExtResource("6_bjkyd")
+normal_enabled = true
+normal_texture = ExtResource("5_w14br")
+heightmap_enabled = true
+heightmap_scale = -0.275
+heightmap_texture = ExtResource("3_ya837")
+
+[node name="table" unique_id=1534763687 instance=ExtResource("1_t0nt2")]
+
+[node name="wooden_table_02" parent="." index="0" unique_id=1511015229]
+material_override = SubResource("StandardMaterial3D_g05a4")

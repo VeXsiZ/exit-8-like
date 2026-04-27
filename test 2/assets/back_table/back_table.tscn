@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dpsvo5ft4gx7t"]
+
+[ext_resource type="PackedScene" uid="uid://dwcu8nreq0pps" path="res://test 2/assets/back_table/uploads_files_3423167_996_EmmersonReclaimedWoodCoffeeTable.FBX" id="1_dj436"]
+[ext_resource type="Texture2D" uid="uid://bkxguu8l8hdqu" path="res://test 2/assets/back_table/wood.dif.jpg" id="2_irokf"]
+[ext_resource type="Texture2D" uid="uid://b5eu8pwdtoapk" path="res://test 2/assets/back_table/wood.bum.jpg" id="3_5t8mp"]
+[ext_resource type="Texture2D" uid="uid://d3qbbnsbq8fsg" path="res://test 2/assets/back_table/wood.ref.jpg" id="4_si2nd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ubau7"]
+albedo_texture = ExtResource("2_irokf")
+roughness_texture = ExtResource("4_si2nd")
+ao_texture = ExtResource("3_5t8mp")
+heightmap_scale = 16.0
+heightmap_texture = ExtResource("3_5t8mp")
+
+[node name="uploads_files_3423167_996_EmmersonReclaimedWoodCoffeeTable" unique_id=738582295 instance=ExtResource("1_dj436")]
+transform = Transform3D(-2.6065688, 0, 1.4851933, 0, 3, 0, -1.4851933, 0, -2.6065688, 0, 0, 0)
+
+[node name="996_EmmersonReclaimedWoodCoffeeTable" parent="." index="0" unique_id=1141094732]
+material_override = SubResource("StandardMaterial3D_ubau7")

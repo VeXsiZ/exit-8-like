@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://d0dejrtyv413l"]
+
+[ext_resource type="PackedScene" uid="uid://fp3ynfagvojk" path="res://test 2/assets/bookshelf/Shelf_detached.fbx" id="1_fysc7"]
+[ext_resource type="Texture2D" uid="uid://b2sxpu2b4gtp8" path="res://test 2/assets/bookshelf/WoodQuarteredChiffon001_COL_1K.jpg" id="2_vmw0f"]
+[ext_resource type="Texture2D" uid="uid://domlkby58a5tq" path="res://test 2/assets/bookshelf/WoodQuarteredChiffon001_NRM_1K.jpg" id="3_xpmmy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xwc1s"]
+albedo_texture = ExtResource("2_vmw0f")
+normal_enabled = true
+normal_texture = ExtResource("3_xpmmy")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jdgkt"]
+albedo_texture = ExtResource("2_vmw0f")
+normal_enabled = true
+normal_texture = ExtResource("3_xpmmy")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p8e27"]
+albedo_texture = ExtResource("2_vmw0f")
+normal_enabled = true
+normal_texture = ExtResource("3_xpmmy")
+
+[node name="Shelf_detached" unique_id=1875601838 instance=ExtResource("1_fysc7")]
+
+[node name="Plank_H" parent="." index="0" unique_id=662895809]
+material_override = SubResource("StandardMaterial3D_xwc1s")
+
+[node name="Plank_V_B_R" parent="." index="3" unique_id=62650170]
+material_override = SubResource("StandardMaterial3D_jdgkt")
+
+[node name="Plank_V_B_L" parent="." index="4" unique_id=185741555]
+material_override = SubResource("StandardMaterial3D_p8e27")

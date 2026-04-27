@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bxk6mtey25bhj"]
+
+[ext_resource type="PackedScene" uid="uid://6gyei3w2tli4" path="res://test 2/assets/sofa/tripo_convert_04b61a30-d7db-46d7-ab0e-ab5dd772e40c.fbx" id="1_5yo16"]
+[ext_resource type="Texture2D" uid="uid://4whys8j4vj4c" path="res://test 2/assets/sofa/Meshy_AI_Midnight_Grey_Sofa_0427213940_generate.glb_basecolor.JPEG" id="2_1v3mv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x3ght"]
+albedo_texture = ExtResource("2_1v3mv")
+
+[node name="tripo_convert_04b61a30-d7db-46d7-ab0e-ab5dd772e40c" unique_id=413153850 instance=ExtResource("1_5yo16")]
+
+[node name="tripo_node_04b61a30" parent="." index="0" unique_id=1373878564]
+material_override = SubResource("StandardMaterial3D_x3ght")
